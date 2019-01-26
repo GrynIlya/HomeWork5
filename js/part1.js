@@ -7,7 +7,7 @@
         2) Длина пароля долдна быть минимум 6 символов,но не менее 20;
         3) Пароль должен содержать буквы и цифры`, ``);
 
-    console.log(password);
+    console.log('Введенный пароль:' + password);
 
     function validatePassword(password) {
 
@@ -40,12 +40,12 @@
     result.validate=validatePassword (password);
 
     if(result.validate=='invalid'){
-        console.log('пароль не соответствует требованиям')
+        console.log('пароль не соответствует требованиям');
     }else{
         let number = prompt(`Введите число:         
        `, ``);
 
-        console.log(number);
+        console.log('Введенное число:' + number);
 
         checkNumber(number);
         result.userNumber=checkNumber(number);
@@ -84,6 +84,9 @@
        `, ``);
         getSum(number1,number2);
     }
+    if(result.userNumber==false){
+        console.log('Число не соответствует ни одному из требований');
+    }
     function getSum(number1,number2){
 
     let i;
@@ -114,10 +117,10 @@
         }
 
     }
-    arr.reverse();
+        arr.reverse();
 
         sum=arr.join('');
-        console.log(sum);
+        console.log('Сумма этих чисел:' + sum);
         result.sumNumbers=sum;
     }
 
